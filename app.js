@@ -192,7 +192,7 @@ function sendExercise() {
 
     const payload = {
       type: 'exercise_data',
-      features: featuresArray
+      features: { features: featuresArray }
     };
 
     stompClient.send(
