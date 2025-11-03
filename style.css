@@ -1,0 +1,168 @@
+body {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.row {
+  margin: 0;
+}
+
+/* Status Badge */
+.status-badge {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.status-connected {
+  background: #00ff9c;
+  color: #000;
+}
+
+.status-disconnected {
+  background: #ff4444;
+  color: #fff;
+}
+
+.status-connecting {
+  background: #ffaa00;
+  color: #000;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.5; 
+  }
+}
+
+/* Form Inputs */
+textarea, 
+input[type="text"],
+input[type="number"] {
+  background: #1e1e1e;
+  color: #eaeaea;
+  border: 1px solid #333;
+}
+
+textarea {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+textarea:focus,
+input:focus {
+  background: #252525;
+  color: #eaeaea;
+  border-color: #00ff9c;
+}
+
+/* Buttons */
+.btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Log Output */
+pre.log {
+  background: #1a1a1a;
+  color: #b8f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  height: calc(100vh - 180px);
+  min-height: 500px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #333;
+  margin: 0;
+}
+
+/* Stats Card */
+.stats-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: #aaa;
+}
+
+.stat-value {
+  color: #00ff9c;
+  font-weight: bold;
+}
+
+/* Feature Input */
+.feature-input {
+  background: #1e1e1e;
+  color: #00ff9c;
+  font-family: monospace;
+  font-size: 12px;
+  border: 1px solid #333;
+}
+
+/* Log Entry Styling */
+.log-entry {
+  margin: 2px 0;
+}
+
+.log-success { 
+  color: #00ff9c; 
+}
+
+.log-error { 
+  color: #ff4444; 
+}
+
+.log-warning { 
+  color: #ffaa00; 
+}
+
+.log-info { 
+  color: #b8f7ff; 
+}
+
+.log-debug { 
+  color: #888; 
+}
+
+/* Custom scrollbar for log */
+pre.log::-webkit-scrollbar {
+  width: 8px;
+}
+
+pre.log::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+pre.log::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+pre.log::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
