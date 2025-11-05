@@ -192,7 +192,12 @@ function sendExercise() {
 
     const payload = {
       type: 'exercise_data',
-      features: { features: featuresArray }
+      startTime: Date.now() - 1000,
+      endTime: Date.now(),
+      data: { 
+        features: featuresArray,
+        averageHearthRate: 75,
+      }
     };
 
     stompClient.send(
@@ -219,7 +224,10 @@ function sendSessionEnd() {
   }
 
   try {
-    const payload = { type: 'session_end' };
+    const payload = { 
+      type: 'session_end', 
+      endTime: Date.now() 
+    };
     stompClient.send(
       '/app/websocket',
       {},
